@@ -1,0 +1,7 @@
+﻿  game.c
+d:\all files\c程序\chase\三子棋2019.2.12\三子棋2019.2.12\game.c(90): warning C4013: “is_full”未定义；假设外部返回 int
+d:\all files\c程序\chase\三子棋2019.2.12\三子棋2019.2.12\game.c(78): warning C4101: “j”: 未引用的局部变量
+  test.c
+d:\all files\c程序\chase\三子棋2019.2.12\三子棋2019.2.12\test.c(16): warning C4013: “memset”未定义；假设外部返回 int
+  正在生成代码...
+  三子棋2019.2.12.vcxproj -> D:\All files\c程序\chase\三子棋2019.2.12\Debug\三子棋2019.2.12.exe
