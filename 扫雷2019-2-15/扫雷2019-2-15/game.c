@@ -5,7 +5,7 @@ void Init_board(char arr[ROWS][COLS], int rows, int cols, char ret)
 	int i, j;
 	for (i = 0; i < rows; i++)
 	{
-		for(j = 0; j < cols; j++)
+		for (j = 0; j < cols; j++)
 		{
 			arr[i][j] = ret;
 		}
@@ -21,7 +21,7 @@ void Set_mine(char arr[ROWS][COLS], int row, int col)
 		x = rand() % row + 1;
 		y = rand() % col + 1;
 		//使雷设置在数组Mine_board[ROWS][ROWS]1-9列和1-9行,最外面一圈不必设置雷
-		if ((x > 0 && x <=row) && (y > 0 && y <=col))
+		if ((x > 0 && x <= row) && (y > 0 && y <= col))
 		{
 			if (arr[x][y] == '0')//保证设雷的位置不重复
 			{
@@ -40,10 +40,10 @@ void print_board(char arr[ROWS][COLS], int row, int col)
 		printf("%d ", i);
 	}
 	printf("\n");
-	for (i = 1; i <=row; i++)
+	for (i = 1; i <= row; i++)
 	{
 		printf("%d", i);
-		for (j = 1; j <=col; j++)
+		for (j = 1; j <= col; j++)
 		{
 			printf(" %c", arr[i][j]);
 		}
@@ -78,7 +78,7 @@ void Find_mine(char Mine[ROWS][COLS], char Show[ROWS][COLS], int row, int col)
 			{
 				int count = Get_mine(Mine, x, y);//将此处周围雷的个数赋给count
 				Show[x][y] = count + '0';//转换为字符型，赋给此处的数组元素
-				open_white(Mine,Show, x, y);
+				open_white(Mine, Show, x, y);
 				print_board(Show, ROW, COL);//打印棋盘
 				win++;//以此判断是否全部排雷完成
 			}
@@ -101,7 +101,7 @@ void Find_mine(char Mine[ROWS][COLS], char Show[ROWS][COLS], int row, int col)
 	}
 }
 //点非雷位置，展开一片空白的函数
-void open_white(char Mine[ROWS][COLS], char Show[ROWS][COLS],int x, int y)
+void open_white(char Mine[ROWS][COLS], char Show[ROWS][COLS], int x, int y)
 {
 	if (Get_mine(Mine, x, y) == 0)
 	{
@@ -124,6 +124,5 @@ void open_white(char Mine[ROWS][COLS], char Show[ROWS][COLS],int x, int y)
 			open_white(Mine, Show, x + 1, y + 1);
 	}
 	else
-		Show[x][y] = Get_mine(Mine,x,y) + '0';
+		Show[x][y] = Get_mine(Mine, x, y) + '0';
 }
-	

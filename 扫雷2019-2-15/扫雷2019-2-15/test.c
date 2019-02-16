@@ -35,7 +35,7 @@ void game()
 	Set_mine(Mine, ROW, COL);//设置雷
 	print_board(Show, ROW, COL);//打印要排查雷的数组
 	print_board(Mine, ROW, COL);//打印已知雷位置的数组
-	Find_mine(Mine,Show, ROW, COL);//排雷
+	Find_mine(Mine, Show, ROW, COL);//排雷
 }
 int main()
 {
