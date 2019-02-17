@@ -1,0 +1,4 @@
+﻿  test.c
+d:\all files\c程序\chase\翻转一个数的二进制得出新值\翻转一个数的二进制得出新值\test.c(22): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+d:\all files\c程序\chase\翻转一个数的二进制得出新值\翻转一个数的二进制得出新值\test.c(33): warning C4098: “main”:“void”函数返回值
+  翻转一个数的二进制得出新值.vcxproj -> D:\All files\c程序\chase\翻转一个数的二进制得出新值\Debug\翻转一个数的二进制得出新值.exe
