@@ -1,0 +1,4 @@
+﻿  test.c
+d:\all files\c程序\chase\杨氏矩阵2019.2.18\杨氏矩阵2019.2.18\test.c(50): warning C4098: “main”:“void”函数返回值
+d:\all files\c程序\chase\杨氏矩阵2019.2.18\杨氏矩阵2019.2.18\test.c(41): warning C4047: “初始化”:“int *”与“int (*)[3]”的间接级别不同
+  杨氏矩阵2019.2.18.vcxproj -> D:\All files\c程序\chase\杨氏矩阵2019.2.18\Debug\杨氏矩阵2019.2.18.exe
