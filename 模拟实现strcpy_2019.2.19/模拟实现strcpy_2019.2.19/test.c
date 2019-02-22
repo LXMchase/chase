@@ -3,32 +3,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
-char* My_strcpy(char* p1, char* p2)
+char* My_strcpy( char* p1, const char* p2)
 {
 	assert(p1 != NULL && p2 != NULL);
-	int n = 0;
-	int i = 0;
-	char* p = p2;
-	while (*p2)
+	char* p = p1;
+	while (*p1++ = *p2++)
 	{
-		n++;
-		p2++;
-	};
-	i = n;
-	while(n--)
-	{
-		*(p1++) = *(p++);
-	};
-	*p1 = '\0';
-	return (p1 - i);
+		;
+	}
+	return p;
 }
-
 void main()
 {
 	char arr1[20] = { "ABCDEFGHMN" };
 	char arr2[10] = { "abcdefg" };
 	char* arr=My_strcpy(arr1, arr2);
-	printf("%s", arr);
+	printf("%s\n", arr);
 	system("pause");
 	return 0;
 }
