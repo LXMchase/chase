@@ -79,7 +79,7 @@ void com_move(char board[ROW][COL], int row, int col)
 }
 char is_win(char board[ROW][COL], int row,int col)
 {
-	int i, j;
+	int i;
 	for (i = 0; i < row; i++)
 	{
 		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ')
@@ -97,7 +97,6 @@ char is_win(char board[ROW][COL], int row,int col)
 	}
 	return 'C';//否则，is_win返回‘C’,表示棋盘未满
 }
-
 int is_full(char board[ROW][COL], int row, int col)
 {
 	int i, j;
