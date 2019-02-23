@@ -103,25 +103,22 @@ void Find_mine(char Mine[ROWS][COLS], char Show[ROWS][COLS], int row, int col)
 //点非雷位置，展开一片空白的函数
 void open_white(char Mine[ROWS][COLS], char Show[ROWS][COLS], int x, int y)
 {
+	int i = 0;
+	int j = 0;
 	if (Get_mine(Mine, x, y) == 0)
 	{
 		Show[x][y] = ' ';
-		if ((x - 1) > 0 && (y - 1) > 0 && (Show[x - 1][y - 1] == '*'))
-			open_white(Mine, Show, x - 1, y - 1);
-		if ((x - 1) > 0 && (y) > 0 && (Show[x - 1][y] == '*'))
-			open_white(Mine, Show, x - 1, y);
-		if ((x - 1) > 0 && (y + 1) > 0 && (Show[x - 1][y + 1] == '*'))
-			open_white(Mine, Show, x - 1, y + 1);
-		if ((x) > 0 && (y - 1) > 0 && (Show[x][y - 1] == '*'))
-			open_white(Mine, Show, x, y - 1);
-		if ((x) > 0 && (y + 1) > 0 && (Show[x][y + 1] == '*'))
-			open_white(Mine, Show, x, y + 1);
-		if ((x + 1) > 0 && (y - 1) > 0 && (Show[x + 1][y - 1] == '*'))
-			open_white(Mine, Show, x + 1, y - 1);
-		if ((x + 1) > 0 && (y) > 0 && (Show[x + 1][y] == '*'))
-			open_white(Mine, Show, x + 1, y);
-		if ((x + 1) > 0 && (y + 1) > 0 && (Show[x + 1][y + 1] == '*'))
-			open_white(Mine, Show, x + 1, y + 1);
+		for (i = -1; i < 2; i++)
+		{
+			for (j = -1; j < 2; j++)
+			{
+				if ((x + i) > 0 && (y + j) > 0 && (Show[x + i][y + j]=='*'))
+				{
+					open_white(Mine, Show, x + i, y + j);
+				}
+			}
+		}
+		
 	}
 	else
 		Show[x][y] = Get_mine(Mine, x, y) + '0';
