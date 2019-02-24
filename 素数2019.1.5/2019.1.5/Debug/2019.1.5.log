@@ -1,2 +1,2 @@
-﻿test2.obj : error LNK2005: _main 已经在 test.obj 中定义
-D:\所有文件\c程序\2019.1.5\Debug\2019.1.5.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
+﻿  test.c
+  2019.1.5.vcxproj -> D:\All files\c程序\chase\素数2019.1.5\Debug\2019.1.5.exe
